@@ -5,34 +5,155 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/bootstrap.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/style.css">
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="header__logo">
+                <div>
+                  <a href="./">
+                    <img src="img/logo_v_2.svg" alt="logo">
+                  </a>
+                </div>
+                <div class="header__logo-wrap">
+                  <b class="header__logo-head">Трансдорстат</b>
+                  <span class="header__logo-slogan">Унифицированная система сбора отчетностсти</span>
+                </div>  
+              </div>
+            </div>
+            <div class="col-lg-4 header__right-block">
+              <div class="row justify-content-between">
+                <div class="col-lg-8">
+                  <div class="header__geolocation">
+                    <a class="header__geolocation-button" href="#">Татарстан</a>  
+                    <div class="header__geolocation-block">
+                      <ul class="header__geolocation-list">
+                        <li class="header__geolocation-item header__geolocation-item--active">
+                          <span class="header__geolocation-abc">А</span>
+                          <span class="header__geolocation-city">Алтайский край</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-city">Амурская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-city">Архангельская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-city">Астраханская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-abc">Б</span>
+                          <span class="header__geolocation-city">Белгородская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-city">Брянская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-abc">В</span>
+                          <span class="header__geolocation-city">Владимирская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-city">Вологодская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-abc">З</span>
+                          <span class="header__geolocation-city">Забайкальский край</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-abc">И</span>
+                          <span class="header__geolocation-city">Ивановская область</span>
+                        </li>
+                        <li class="header__geolocation-item">
+                          <span class="header__geolocation-abc">К</span>
+                          <span class="header__geolocation-city">Кабардино-Балкарская</span>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="header__login">
+                    <a class="header__login-button" href="#">Вход</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="main--white">
+          <div id="root"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer__logo">
+                <div>
+                  <img src="img/logo-b.svg" alt="foot-logo">
+                </div>
+                <div class="footer__logo-wrap">
+                  <b class="footer__logo-head">Трансдорстат</b>
+                  <span class="footer__logo-slogan">Унифицированная система сбора отчетностсти</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="menu row">
+                <div class="menu-section col-lg-4">
+                  <b class="menu-head">Помощь и поддержка</b>
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <a href="#">Вход и регистрация</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">Задать вопрос</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-section col-lg-4">
+                  <b class="menu-head">Партнёрам</b>
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <a href="#">Государственным органам</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">Коммерческим организациям</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">Документы</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-section col-lg-4">
+                  <b class="menu-head">Полезные ресурсы</b>
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <a href="#">Российская общественная инициатива</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">Интернет-портал правовой информации</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
