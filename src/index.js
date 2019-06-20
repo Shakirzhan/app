@@ -8,8 +8,7 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactStatements from 'babel-plugin-transform-react-statements';
-import App from './App';
+import App from './example';
 
 ReactDOM.render(
 <App />,
