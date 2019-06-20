@@ -525,16 +525,22 @@ h2.main-form__main-custom {
 }
 
 .main-tab__item {
-  position: relative;
+  display: inline-block;
+  /*position: relative;
   text-align: center;
   font-size: 20px;
-  padding: 23px 0;
+  padding: 23px 0;*/
   border-right: 1px solid #eff0f3;
   border-bottom: 3px solid #eff0f3;
 }
 
 .main-tab__item a {
+  display: block;
   color: #282828;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  padding: 23px 0;
 }
 
 .main-tab__item a:hover {
