@@ -687,6 +687,12 @@ h2.main-form__main-custom {
   background-color: #efefef;
   padding: 8px 20px;
   margin-bottom: 5px;
+  color: #282828;
+}
+
+.annual-section__item:hover {
+  color: #282828;
+  text-decoration: none;
 }
 
 .annual-section__item:hover::before {
@@ -761,6 +767,10 @@ h2.main-form__main-custom {
   color: #282828;
   background-color: #eff0f3;
   margin-top: 7px;
+}
+
+.question__head:hover {
+  cursor: pointer;
 }
 
 .question__dscr {

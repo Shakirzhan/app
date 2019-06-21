@@ -7,13 +7,13 @@ export default [
   },
   {  
     "id": 2,
-    "url": "/about",
+    "url": "/interimreports",
     "name_url": "Промежуточные отчеты",
     "class_active": ""
   },
   {  
     "id": 3,
-    "url": "/static",
+    "url": "/statistics",
     "name_url": "Статистика",
     "class_active": ""
   },
