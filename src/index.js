@@ -9,6 +9,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './example';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Logo from './logo_link';
 
 ReactDOM.render(
 <App />,
