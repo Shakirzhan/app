@@ -4,6 +4,7 @@ import menuList from "./menu_list"
 import Logo from './logo_link';
 import FinalReports from './final_reports'
 import questionList from './question_list'
+import mainReport from './main_report'
 
 function BasicExample() {
   return (
@@ -59,49 +60,9 @@ function Header() {
               <div className="row justify-content-between">
                 <div className="col-lg-8">
                   <div className="header__geolocation">
-                    <a className="header__geolocation-button" href="#">Татарстан</a>  
+                    <a className="header__geolocation-button" href="#">Алтайский край</a>  
                     <div className="header__geolocation-block">
-                      <ul className="header__geolocation-list">
-                        <li className="header__geolocation-item header__geolocation-item--active">
-                          <span className="header__geolocation-abc">А</span>
-                          <span className="header__geolocation-city">Алтайский край</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-city">Амурская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-city">Архангельская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-city">Астраханская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-abc">Б</span>
-                          <span className="header__geolocation-city">Белгородская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-city">Брянская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-abc">В</span>
-                          <span className="header__geolocation-city">Владимирская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-city">Вологодская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-abc">З</span>
-                          <span className="header__geolocation-city">Забайкальский край</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-abc">И</span>
-                          <span className="header__geolocation-city">Ивановская область</span>
-                        </li>
-                        <li className="header__geolocation-item">
-                          <span className="header__geolocation-abc">К</span>
-                          <span className="header__geolocation-city">Кабардино-Балкарская</span>
-                        </li>
-                      </ul> 
+                      <ul className="header__geolocation-list"></ul> 
                     </div>
                   </div>
                 </div>
@@ -224,7 +185,7 @@ function InterimReports() {
     </div>
   );
 }
-
+        
 function InterimReportsContent() {
   return (
     <div className="main-wrap">

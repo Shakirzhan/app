@@ -93,6 +93,10 @@ body {
   font-size: 16px;
 }
 
+.header__geolocation-item:hover {
+  cursor: pointer;
+}
+
 .header__geolocation-item--active {
   background-color: rgba(0, 0, 0, 0.22);
 }
@@ -116,6 +120,10 @@ body {
   margin-top: -4.5px;
   background-image: url(/img/arrow.svg);
   background-repeat: no-repeat;
+}
+
+.header__geolocation-button--inverted::before {
+  transform: rotate(180deg);
 }
 
 .header__geolocation-button:hover {
@@ -788,7 +796,7 @@ h2.main-form__main-custom {
 }
 
 .header__geolocation-button:hover + .header__geolocation-block {
-  display: block;
+  /*display: block;*/
 }
 
 @media (max-width: 768px) {
