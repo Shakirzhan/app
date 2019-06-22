@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import menuList from "./menu_list"
 import Logo from './logo_link';
 import FinalReports from './final_reports'
+import questionList from './question_list'
 
 function BasicExample() {
   return (
@@ -100,12 +101,15 @@ function QuestionContent() {
 }
 
 function PopularQuestions() {
+  const doubled = questionList.map((it) =>
+    <div key={`${it.id}`}>
+      <b className="question__head">{it.title}</b>
+      <p className={`question__dscr ${it.class_show}`}>{it.description}</p> 
+    </div>
+  );
   return (
     <div className="main-form">
-        <b className="question__head">
-          Название вопроса
-        </b>
-        <p className="question__dscr">Долгий ответ на вопрос от Динары нужно будет узнать. Долгий ответ на вопрос от Динары нужно будет узнать</p>
+      {doubled}   
     </div>
   );
 }

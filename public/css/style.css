@@ -774,12 +774,17 @@ h2.main-form__main-custom {
 }
 
 .question__dscr {
+  display: none;
   padding: 12px 22px 22px;
   opacity: .5;
   margin: 0;
   font-size: 30px;
   color: #282828;
   background-color: #eff0f3;
+}
+
+.question__dscr--show {
+  display: block;
 }
 
 .header__geolocation-button:hover + .header__geolocation-block {
