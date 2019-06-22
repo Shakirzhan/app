@@ -16,6 +16,56 @@ function BasicExample() {
   );
 }
 
+function viewReport() {
+  return(
+    <div className="main-form">
+      <div className="main-form__child">
+        <h2 className="main-form__child-head">Наименование автомобильной дороги</h2>
+        <div className="main-form__section">
+          <b className="main-form__head">Тип дороги</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="Автомобильная дорога регионального и межмунициального значения" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Код в СКДФ</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="Код" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Наименование автомобильной дороги</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="Код" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Идентификатор</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="Код" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Протяженность покрытия дороги, км</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="1" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Площадь покрытия дороги, кв.м</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="1" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Адрес участка: конец (км+м)</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="1+001" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Вид работ</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="Устройство светофорных объектов" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Мощность работ, шт</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="30" />
+        </div>
+        <div className="main-form__section">
+          <b className="main-form__head">Стоимость, тыс. руб.</b>
+          <input type="text" name="text" className="main-form__txt" placeholder="30" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Content() {
   return (
     <div className="main">
@@ -31,6 +81,8 @@ function Content() {
 
               <Route path="/question" component={QuestionContent} />
               <Route path="/question" component={PopularQuestions} />
+
+              <Route path="/det" component={viewReport} />
             </div>
           
         </div>

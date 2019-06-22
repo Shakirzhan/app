@@ -5,10 +5,10 @@ import mainReport from './main_report'
 function FinalReports() {
   function elements(el) {
     const doubled = el.map((it) =>
-      <a href="#" className="annual-section__item" key={it.id}>
+      <Link to="/det" className="annual-section__item" key={it.id}>
         <b className="annual-section__item-head">{it.title}</b>
         <b className="annual-section__item-date">{it.date}</b>
-      </a>
+      </Link>
     );
     return(
       <div className="annual-section__list">
