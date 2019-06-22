@@ -14,5 +14,5 @@ import Logo from './logo_link';
 
 ReactDOM.render(
 <App />,
-document.getElementById('root')
+document.getElementById('main-content')
 );

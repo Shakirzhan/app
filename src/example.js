@@ -8,18 +8,178 @@ import questionList from './question_list'
 function BasicExample() {
   return (
     <Router>
-      
-      <Route component={Menu} />
-      <div>
-        <Route exact path="/" component={FinalReports} />
+      <Header />
+      <Content />
+      <Footer />
+    </Router> 
+  );
+}
 
-        <Route path="/interimreports" component={InterimReports} />
-        <Route path="/interimreports" component={InterimReportsContent} />
+function Content() {
+  return (
+    <div className="main">
+      <div className="container">
+        <div className="main--white">
+          
+            <Route component={Menu} />
+            <div>
+              <Route exact path="/" component={FinalReports} />
 
-        <Route path="/question" component={QuestionContent} />
-        <Route path="/question" component={PopularQuestions} />
+              <Route path="/interimreports" component={InterimReports} />
+              <Route path="/interimreports" component={InterimReportsContent} />
+
+              <Route path="/question" component={QuestionContent} />
+              <Route path="/question" component={PopularQuestions} />
+            </div>
+          
+        </div>
       </div>
-    </Router>
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="header">
+      <div className="container">
+        <div className="header__wrap">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="header__logo">
+                <div id="header__logo">
+                  <Logo />
+                </div>
+                <div className="header__logo-wrap">
+                  <b className="header__logo-head">Трансдорстат</b>
+                  <span className="header__logo-slogan">Унифицированная система сбора отчетностсти</span>
+                </div>  
+              </div>
+            </div>
+            <div className="col-lg-4 header__right-block">
+              <div className="row justify-content-between">
+                <div className="col-lg-8">
+                  <div className="header__geolocation">
+                    <a className="header__geolocation-button" href="#">Татарстан</a>  
+                    <div className="header__geolocation-block">
+                      <ul className="header__geolocation-list">
+                        <li className="header__geolocation-item header__geolocation-item--active">
+                          <span className="header__geolocation-abc">А</span>
+                          <span className="header__geolocation-city">Алтайский край</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-city">Амурская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-city">Архангельская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-city">Астраханская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-abc">Б</span>
+                          <span className="header__geolocation-city">Белгородская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-city">Брянская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-abc">В</span>
+                          <span className="header__geolocation-city">Владимирская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-city">Вологодская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-abc">З</span>
+                          <span className="header__geolocation-city">Забайкальский край</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-abc">И</span>
+                          <span className="header__geolocation-city">Ивановская область</span>
+                        </li>
+                        <li className="header__geolocation-item">
+                          <span className="header__geolocation-abc">К</span>
+                          <span className="header__geolocation-city">Кабардино-Балкарская</span>
+                        </li>
+                      </ul> 
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="header__login">
+                    <a className="header__login-button" href="#">Вход</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="footer">
+      <div className="container">
+        <div className="footer__wrap">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="footer__logo">
+                <div>
+                  <img src="img/logo-b.svg" alt="foot-logo" />
+                </div>
+                <div className="footer__logo-wrap">
+                  <b className="footer__logo-head">Трансдорстат</b>
+                  <span className="footer__logo-slogan">Унифицированная система сбора отчетностсти</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-8">
+              <div className="menu row">
+                <div className="menu-section col-lg-4">
+                  <b className="menu-head">Помощь и поддержка</b>
+                  <ul className="menu-list">
+                    <li className="menu-item">
+                      <a href="#">Вход и регистрация</a>
+                    </li>
+                    <li className="menu-item">
+                      <a href="#">Задать вопрос</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="menu-section col-lg-4">
+                  <b className="menu-head">Партнёрам</b>
+                  <ul className="menu-list">
+                    <li className="menu-item">
+                      <a href="#">Государственным органам</a>
+                    </li>
+                    <li className="menu-item">
+                      <a href="#">Коммерческим организациям</a>
+                    </li>
+                    <li className="menu-item">
+                      <a href="#">Документы</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="menu-section col-lg-4">
+                  <b className="menu-head">Полезные ресурсы</b>
+                  <ul className="menu-list">
+                    <li className="menu-item">
+                      <a href="#">Российская общественная инициатива</a>
+                    </li>
+                    <li className="menu-item">
+                      <a href="#">Интернет-портал правовой информации</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

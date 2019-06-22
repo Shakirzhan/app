@@ -1,7 +1,8 @@
 var $boolean = false;
 
 $(function() {
-	var $tabItem = $( ".main-tab__item" );
+	var $tabItem = $( ".main-tab__item" ),
+			$headerLogo = $( "#header__logo" );
 
 	$tabItem.click(function(e) {
 		$tabItem.each(function(tabEl) {
@@ -11,6 +12,13 @@ $(function() {
 		setTimeout(callFunction, 1);
 
 		$( this ).addClass( "main-tab__item--active" );
+	});
+
+	$headerLogo.click(function(e) {
+		$tabItem.each(function(tabEl) {
+			$tabItem[tabEl].classList.remove( "main-tab__item--active" );
+		});	
+		$( $tabItem[0] ).addClass( "main-tab__item--active" );
 	});
 
 	$tabItem.each(function(tabEl) {
