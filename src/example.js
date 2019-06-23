@@ -7,6 +7,7 @@ import FinalReports from './final_reports'
 import questionList from './question_list'
 import mainReport from './main_report'
 import intermediaReport from './intermedia_report'
+import ReactDOMStream from "react-dom-stream/server";
 
 function BasicExample() {
   return (
@@ -239,32 +240,50 @@ function InterimReports() {
     </div>
   );
 }
-
+var arrN;
 function handleFiltr(e) {
   var filtr = +e.target.value;
   var d = [];
   var displayedData = intermediaReport.map(function(el, index) {
+    var obj = {};
     var data = el.child_element;
+    obj.id = el.id;
+    obj.year = el.year;
+    obj.child_element = [];
     data.filter(function(it, i) {
       if ( it.bix == filtr ) {
-        d.push( it );  
+        obj.child_element.push( it );  
       }
     });
+    d.push( obj );
   });
-  console.log( d );
-  return d;
-  function HTML(el) {
+  function HTML(props) {
+    const { el } = props;
+    function elements(el) {
+      const doubled = el.map( (it) =>  
+        <a href="#" className="annual-section__item annual-section__item--pink-dark" key={it.id}>
+          <b className="annual-section__item-head">{it.title}</b>
+          <b className="annual-section__item-date">{it.date}</b>
+        </a>
+      );
+      return (
+        <div className="annual-section__list">
+          {doubled}
+        </div> 
+      );
+    }
     const doubled = el.map( (it) => 
       <div className="annual-section" key={it.id}>
         <b className="annual-section__head">{it.year}</b>
-        
+        {elements(it.child_element)}
       </div>    
-    );  
+    );
+    return (
+      <div className="sss" key="unik">
+        {doubled}
+      </div> 
+    );
   }
-  ReactDOM.render(
-    <HTML />,
-    document.querySelector( ".main-wrap" )
-  );
 }
         
 function InterimReportsContent() {
@@ -281,6 +300,7 @@ function InterimReportsContent() {
       </div> 
     );
   }
+
   const doubled = intermediaReport.map( (it) => 
     <div className="annual-section" key={it.id}>
       <b className="annual-section__head">{it.year}</b>
@@ -288,7 +308,7 @@ function InterimReportsContent() {
     </div>    
   );
   return (
-    <div className="main-wrap">
+    <div className="main-wrap" id="main-wrap">
       {doubled} 
     </div>
   );
