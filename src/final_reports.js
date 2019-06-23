@@ -5,7 +5,7 @@ import mainReport from './main_report'
 function FinalReports() {
   function elements(el) {
     const doubled = el.map((it) =>
-      <Link to="/det" className="annual-section__item" key={it.id}>
+      <Link to="/det" className={`annual-section__item ${it.class}`} key={it.id}>
         <b className="annual-section__item-head">{it.title}</b>
         <b className="annual-section__item-date">{it.date}</b>
       </Link>

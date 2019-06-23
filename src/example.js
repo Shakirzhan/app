@@ -1,10 +1,12 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import menuList from "./menu_list"
 import Logo from './logo_link';
 import FinalReports from './final_reports'
 import questionList from './question_list'
 import mainReport from './main_report'
+import intermediaReport from './intermedia_report'
 
 function BasicExample() {
   return (
@@ -215,21 +217,21 @@ function InterimReports() {
       <b className="types__head">Типы отчетов:</b>
       <div className="types__wrap">
         <label className="types__button types__button--darker">
-          <input type="checkbox" name="DTP" />
+          <input type="checkbox" name="accident" value="1" onChange={handleFiltr} />
           <div className="types__visual"></div>
           <span className="types__txt">ДТП</span>
         </label>
       </div>
       <div className="types__wrap">
         <label className="types__button types__button--lighter">
-          <input type="checkbox" name="DTP" />
+          <input type="checkbox" name="men_work" value="2" />
           <div className="types__visual"></div>
           <span className="types__txt">Дорожные работы</span>
         </label>
       </div>
       <div className="types__wrap">
         <label className="types__button types__button--blue-light">
-          <input type="checkbox" name="DTP" />
+          <input type="checkbox" name="hazardous_areas" value="3" />
           <div className="types__visual"></div>
           <span className="types__txt">Опасные участки</span>
         </label>
@@ -237,19 +239,57 @@ function InterimReports() {
     </div>
   );
 }
+
+function handleFiltr(e) {
+  var filtr = +e.target.value;
+  var d = [];
+  var displayedData = intermediaReport.map(function(el, index) {
+    var data = el.child_element;
+    data.filter(function(it, i) {
+      if ( it.bix == filtr ) {
+        d.push( it );  
+      }
+    });
+  });
+  console.log( d );
+  return d;
+  function HTML(el) {
+    const doubled = el.map( (it) => 
+      <div className="annual-section" key={it.id}>
+        <b className="annual-section__head">{it.year}</b>
+        
+      </div>    
+    );  
+  }
+  ReactDOM.render(
+    <HTML />,
+    document.querySelector( ".main-wrap" )
+  );
+}
         
 function InterimReportsContent() {
+  function elements(el) {
+    const doubled = el.map( (it) =>  
+      <a href="#" className="annual-section__item annual-section__item--pink-dark" key={it.id}>
+        <b className="annual-section__item-head">{it.title}</b>
+        <b className="annual-section__item-date">{it.date}</b>
+      </a>
+    );
+    return (
+      <div className="annual-section__list">
+        {doubled}
+      </div> 
+    );
+  }
+  const doubled = intermediaReport.map( (it) => 
+    <div className="annual-section" key={it.id}>
+      <b className="annual-section__head">{it.year}</b>
+      {elements(it.child_element)}
+    </div>    
+  );
   return (
     <div className="main-wrap">
-      <div className="annual-section">
-        <b className="annual-section__head">2019</b>
-        <div className="annual-section__list">
-          <a href="#" className="annual-section__item annual-section__item--pink-dark">
-            <b className="annual-section__item-head">ДТП</b>
-            <b className="annual-section__item-date">01.12.2019</b>
-          </a>
-        </div>
-      </div>
+      {doubled} 
     </div>
   );
 }
